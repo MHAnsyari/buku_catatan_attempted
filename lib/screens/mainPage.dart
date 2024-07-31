@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 void main (){
   runApp(MainPage());
@@ -21,12 +22,41 @@ class MainPage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text('Muhammad Hafiz'),
-              Text('7b'),
-              Text('MAHASISWA'),              
+              // Text('Muhammad Hafiz'),
+              // Text('7b'),
+              // Text('MAHASISWA'),              
+              SizedBox(
+                child: Text('Muhammad hafiz ansyari \n 7b \n Mahasiswa',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  // backgroundColor: Colors.white,
+                  color: Colors.white,
+                  fontSize: 10,
+                  // fontWeight: FontWeight.bold,
+                  // fontStyle: FontStyle.italic,
+                  shadows: [
+                    Shadow(
+                      blurRadius: 1,
+                      color:  Colors.black,
+                      offset: Offset(2, 2)
+                    )
+                  ],
+                  // letterSpacing: 2,
+                  // wordSpacing: 5
+
+                  // decoration: TextDecoration.lineThrough,
+                  // decorationThickness: 5,
+                  // decorationColor: Colors.red,
+                  // decorationStyle: TextDecorationStyle.wavy
+                ),
+
+                // maxLines: 2,
+                // overflow: TextOverflow.ellipsis,
+                
+                )),
             ],
           ),
 
@@ -44,7 +74,6 @@ class MainPage extends StatelessWidget {
                   
                 ),
               ),
-              
             ],
           ),
           Row(
