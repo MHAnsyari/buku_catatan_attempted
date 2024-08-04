@@ -18,7 +18,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white70,
+        backgroundColor: Color.fromARGB(221, 23, 21, 21),
         appBar: AppBar(
           backgroundColor: Colors.black87,
           title: Center(
@@ -28,8 +28,8 @@ class _MainPageState extends State<MainPage> {
           )),
         ),
         body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
+          // mainAxisAlignment: MainAxisAlignment.start,
+          // crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // Text('$number', style: GoogleFonts.poppins(fontSize: 20,),),
 
@@ -45,14 +45,14 @@ class _MainPageState extends State<MainPage> {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     // backgroundColor: Colors.white,
-                    color: Colors.black87,
+                    color: Colors.white,
                     fontSize: 10,
                     // fontWeight: FontWeight.bold,
                     // fontStyle: FontStyle.italic,
                     shadows: [
                       Shadow(
                         blurRadius: 1,
-                        color: Colors.black,
+                        color: Colors.white,
                         // offset: Offset(2, 2)
                       )
                     ],
@@ -87,19 +87,44 @@ class _MainPageState extends State<MainPage> {
             //   ],
             // ),
 
-            Row(
-              children: [
-                //preview buku catatan, judul dll
-              ],
+            // Row(
+            //   children: [
+            //     //preview buku catatan, judul dll
+            //   ],
+            // ),
+
+            const Spacer(),
+
+            // FloatingActionButton(
+            //     onPressed: () {
+            //       setState(() {
+            //         //bejir bingung
+            //       });
+            //     },
+            //     child: const Text('+')),
+
+            ElevatedButton(
+              onPressed: () {},
+              child: Icon(Icons.add),
+              style: ElevatedButton.styleFrom(
+                iconColor: Colors.white,
+                backgroundColor: Colors.black,
+                // surfaceTintColor: Colors.yellow,
+                shadowColor: Colors.white,
+                // iconAlignment: IconAlignment.start,
+                minimumSize: Size(500, 20),
+                // animationDuration: Duration(milliseconds: 100),
+                elevation: 2,
+                // shape: StadiumBorder(),
+                side: BorderSide(color: Colors.white, width: 1),
+                // padding: EdgeInsets.all(10),
+                visualDensity: VisualDensity.compact,
+              ),
             ),
 
-            FloatingActionButton(
-              onPressed: () {
-                setState(() {
-                  //bejir bingung
-                });
-              }, 
-              child: const Text('+'))
+            const SizedBox(
+              height: 10,
+            )
 
             // Row(
             //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
